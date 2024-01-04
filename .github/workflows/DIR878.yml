@@ -29,7 +29,7 @@ jobs:
           sed -i 's/found_app_smartdns = 1/found_app_smartdns = 0/' user/httpd/web_ex.c
 
           # DIR-878
-          wget https://raw.githubusercontent.com/felix-fly/v2ray-padavan-doh/master/DIR-878.config -O configs/templates/DIR-878.config
+          wget https://raw.githubusercontent.com/bill34/v2ray-padavan-doh/master/DIR-878.config -O configs/templates/DIR-878.config
           fakeroot ./build_firmware_modify DIR-878
           mv /opt/rt-n56u/trunk/images/*.trx /opt/bin/DIR-878.trx
       - name: Upload artifact
